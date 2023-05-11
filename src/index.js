@@ -12,6 +12,7 @@ const emptyString = str => (str.innerHTML = '')
 
 
 const oneResultAndFlags = (data) => {
+
 if(data.length === 1){
 emptyString(list)
 listWithInfo.innerHTML=listWithInfoCreate(data)
@@ -28,6 +29,7 @@ list.innerHTML=listCreate(data)
 const listWithInfoCreate = (data) => {
     return data.map(
         ({ name, capital, population, flags, languages }) =>
+       
           `<h1><img src="${flags.png}" alt="${name.official}" width="60" height="60">${
             name.official
           }</h1>
